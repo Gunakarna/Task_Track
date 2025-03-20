@@ -1,0 +1,85 @@
+import React, { useEffect, useState } from "react";
+
+function App() {
+
+  const[count, setCount]=useState(0)
+  const[running, setRunning]=useState(true)
+
+
+  useEffect(()=>{
+    if(!running) return;
+    const interval = setInterval(() => {
+      setCount((Prevcount)=> Prevcount + 1 )
+    }, 1000);
+    return ()=>clearInterval(interval)
+  },[running])
+
+  function eventhandler(){
+    setRunning(false)
+  }
+  return (
+    <div>
+      <h2>check</h2>
+      <button  onClick={eventhandler}>stop</button>
+      <br/> <br/>
+      {count}
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    .Task-order  li{
+        list-style-type: none; 
+        background: #408bd6;
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-size: 19px;
+        color: #333;
+        transition: background 0.3s ease-in-out;
+        text-align: center;
+    }
+
+   .Task-order  li span{
+   color: #121213;
+   font-weight: bolder;
+    }
+    
+
+    /* Task item styling */
+  /* .task-item {
+   text-decoration: line-through;
+
+  
+   
+  } */
+
+    /* .Task-order .Task-list  .deleted{
+    margin-left: 194px;
+    color: yellow;
+    background-color: red;
+    padding: 0px 5px;
+    cursor: pointer;
+    border-radius: 6px;
+   } */
+  
+
+    
+  /* .Task-order li:hover {
+    background: #196dc2;
+  }  */

@@ -1,0 +1,157 @@
+.Task-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;  
+    background-color: #dbabab;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(155, 18, 224, 0.1);
+    text-align: center;
+    border: 3px solid yellow;
+  }
+
+.Task-form-action{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+ 
+  /* Input field styling */
+  .input-task {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .input-task:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Add button styling */
+  .Add-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-btn:hover {
+    background: #0056b3;
+  }
+  
+
+  /* Task count */
+  .task-list-count {
+
+    margin: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+ 
+  /* Responsive Design */
+  @media (min-width: 640px) {
+    .task-input-group {
+      flex-direction: row;
+    }
+  
+    .input-task {
+      width: 75%;
+    }
+  
+    .add-btn {
+      width: auto;
+      padding: 10px 20px;
+    }
+    .task-list-container {
+        width: 90%;
+        padding: 10px;
+      }
+  }
+
+
+
+/* New ADdde */
+
+
+
+  /* Base Styles */
+   /* Task list */
+.Task-order {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Task-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a7ed2;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.Task-list:hover {
+  background-color: #e9ecef;
+}
+
+.task-item {
+  text-decoration: line-through;
+  color: rgb(213, 103, 103);
+}
+
+.deleted {
+  cursor: pointer;
+  color: rgb(6, 7, 6);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  background-color: rgb(86, 199, 146);
+}
+
+.deleted:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+/* Responsive Design  For List */ 
+@media screen and (max-width: 768px) {
+  .Task-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .deleted {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Task-list {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .deleted {
+    font-size: 16px;
+  }
+}
